@@ -38,9 +38,9 @@ Install Glide
 `go build`
 
 Build clairctl
-`export GOPATH=/usr/local/go/src/`
-`git clone https://github.com/jgsqware/clairctl  $GOPATH/src/github.com/jgsqware/clairctl`
-`cd $GOPATH/src/github.com/jgsqware/clairctl`
+`export GOPATH=/usr/local/go/src/`  
+`git clone https://github.com/jgsqware/clairctl  $GOPATH/src/github.com/jgsqware/clairctl`  
+`cd $GOPATH/src/github.com/jgsqware/clairctl`  
 `go build`
 
 Copy the clairclt executable in the bin directory  
@@ -64,8 +64,8 @@ The HTML report is available here
 https://github.com/optiopay/klar
 
 Install klar
-`curl -L https://github.com/optiopay/klar/releases/download/v1.2.1/klar-1.2.1-linux-amd64 -o /usr/local/bin/klar`
+`curl -L https://github.com/optiopay/klar/releases/download/v1.2.1/klar-1.2.1-linux-amd64 -o /usr/local/bin/klar`  
 `chmod +x  /usr/local/bin/klar`
 
 # Notes
-HTTPS registeries are not part of this demo.
+HTTPS registries are not part of this demo.
