@@ -44,7 +44,7 @@ Copy the clairclt executable in the bin directory
 `cp -v $GOPATH/src/github.com/jgsqware/clairctl/clairctl /usr/local/bin`
 
 
-# Run an image scanning   
+# Run an image scanning with clairctl
 
 Pull the official nginx Docker image from Docker Hub to Clair    
 `clairctl pull nginx`    
@@ -54,6 +54,16 @@ Generate the report
 `clairctl report nginx`  
 The HTML report is available here       
 `$HOME/reports/html/analysis-nginx-latest.html`  
+
+
+# CI integration with klar
+
+https://github.com/optiopay/klar
+
+Install klar
+curl -L https://github.com/optiopay/klar/releases/download/v1.2.1/klar-1.2.1-linux-amd64 -o /usr/local/bin/klar
+chmod +x  /usr/local/bin/klar
+
 
 # Notes
 HTTPS registories are not part of this demo.
