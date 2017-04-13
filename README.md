@@ -37,7 +37,7 @@ Install Glide
 `glide install -v`
 `go build`
 
-Build clairctl
+Build clairctl  
 `export GOPATH=/usr/local/go/src/`  
 `git clone https://github.com/jgsqware/clairctl  $GOPATH/src/github.com/jgsqware/clairctl`  
 `cd $GOPATH/src/github.com/jgsqware/clairctl`  
