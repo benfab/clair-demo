@@ -34,17 +34,20 @@ See https://github.com/jgsqware/clairctl
 
 Install Glide  
 `curl https://glide.sh/get | sh`
-
-Clone and build  
-`git clone https://github.com/jgsqware/clairctl  $GOPATH/src/github.com/jgsqware/clairctl`
 `glide install -v`
+`go build`
+
+Build clairctl
+`export GOPATH=/usr/local/go/src/`
+`git clone https://github.com/jgsqware/clairctl  $GOPATH/src/github.com/jgsqware/clairctl`
+`cd $GOPATH/src/github.com/jgsqware/clairctl`
 `go build`
 
 Copy the clairclt executable in the bin directory  
 `cp -v $GOPATH/src/github.com/jgsqware/clairctl/clairctl /usr/local/bin`
 
 
-# Run an image scanning with clairctl
+# Generate an image scanning report with clairctl
 
 Pull the official nginx Docker image from Docker Hub to Clair    
 `clairctl pull nginx`    
@@ -56,14 +59,13 @@ The HTML report is available here
 `$HOME/reports/html/analysis-nginx-latest.html`  
 
 
-# CI integration with klar
+# Integrate the image scanning into Jenkins pipelines with klar
 
 https://github.com/optiopay/klar
 
 Install klar
-curl -L https://github.com/optiopay/klar/releases/download/v1.2.1/klar-1.2.1-linux-amd64 -o /usr/local/bin/klar
-chmod +x  /usr/local/bin/klar
-
+`curl -L https://github.com/optiopay/klar/releases/download/v1.2.1/klar-1.2.1-linux-amd64 -o /usr/local/bin/klar`
+`chmod +x  /usr/local/bin/klar`
 
 # Notes
-HTTPS registories are not part of this demo.
+HTTPS registeries are not part of this demo.
