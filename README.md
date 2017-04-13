@@ -15,10 +15,10 @@ Create docker network
 Deploy a Postgres instance  
 `docker run -d -e POSTGRES_PASSWORD="" -p 5432:5432 --network clair --name postgres postgres:9.6`
 
-Download the default config file for Clair
+Download the default config file for Clair  
 `curl -L https://raw.githubusercontent.com/coreos/clair/master/config.example.yaml -o $HOME/clair_config/config.yaml`
 
-Update the config file line 23 by changing the postgres host from localhost to postgres
+Update the config file line 23 by changing the postgres host from localhost to postgres  
 `vi $HOME/clair_config/config.yaml`
 
 Deploy an instance of clair  
