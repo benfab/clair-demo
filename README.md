@@ -63,7 +63,7 @@ The HTML report is available here
 
 https://github.com/optiopay/klar
 
-Install klar
+Install klar  
 `curl -L https://github.com/optiopay/klar/releases/download/v1.2.1/klar-1.2.1-linux-amd64 -o /usr/local/bin/klar`  
 `chmod +x  /usr/local/bin/klar`
 
