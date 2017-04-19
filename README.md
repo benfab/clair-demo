@@ -5,6 +5,7 @@ Docker image scanning demo with Clair
 
 - CentOS 7 with Development tools installed `yum group install "Development Tools"`  
 - Docker engine 
+- Docker compose
 - Golang 1.8 
 
 # Install Clair
