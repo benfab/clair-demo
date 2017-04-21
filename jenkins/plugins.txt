@@ -1,0 +1,2 @@
+scm-api:latest
+gradle:1.24

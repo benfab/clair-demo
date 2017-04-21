@@ -1,0 +1,17 @@
+FROM golang:1.8-alpine
+
+EXPOSE 6060 6061
+
+ADD .   /go/src/github.com/coreos/clair/
+WORKDIR /go/src/github.com/coreos/clair/
+
+RUN apk add --no-cache git bzr rpm xz && \
+    go install -v https://github.com/coreos/clair/cmd/clair && \
+    mv /go/bin/clair /clair && \
+    rm -rf /go /usr/local/go
+
+ENTRYPOINT ["/clair"]
+
+#FROM quay.io/coreos/clair-git:latest
+#RUN mkdir -p /etc/clair/
+#COPY config.yaml /config/config.yaml
