@@ -23,7 +23,8 @@ Update the config file line 23 by changing the postgres host from localhost to p
 `vi $HOME/clair_config/config.yaml`
 
 Deploy an instance of clair  
-`docker run -d -p 6060-6061:6060-6061 -v $HOME/clair_config:/config --network clair quay.io/coreos/clair-git:latest -config=/config/config.yaml`
+`docker run -d -p 6060-6061:6060-6061  -v /tmp:/tmp -v $HOME/clair_config:/config --network clair quay.io/coreos/clair-git:latest -config=/config/config.yaml`
+
  
 Deploy a private repo  
 `docker run -d -p 5000:5000 --restart=always --name registry registry:2`
