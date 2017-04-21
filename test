@@ -1,0 +1,1 @@
+docker run -it --net clairdemo_net_clair -v /tmp:/tmp  -v /var/run/docker.sock:/var/run/docker.sock --name analyser amouat/clair-analyse -endpoint http://clair:6060 -my-address analyser busybox

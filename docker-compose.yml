@@ -1,15 +1,17 @@
-version: '3'
+version: "3"
+
 services:
+
   postgres:
-    container_name: clair_postgres
     image: postgres:latest
     restart: unless-stopped
-    networks: net_clair
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: ""
+    networks:
+       - net_clair
 
   clair:
-    build: ./clair
+    image: quay.io/coreos/clair-git:latest
     restart: unless-stopped
     depends_on:
       - postgres
@@ -17,11 +19,21 @@ services:
       - "6060-6061:6060-6061"
     volumes:
       - /tmp:/tmp
+      - ./clair/clair_config:/config
+    command: [-config, /config/config.yaml]
     networks:
       - net_clair
-    command: [-config, /config/config.yaml]
 
-   analyse:
-     build: ./analyse
-   networks:
-     - net_clair
+ # analyze:
+ #   build: ./analyze
+ #   restart: unless-stopped
+ #   depends_on:
+ #     - clair
+ #     - postgres
+ #   command: [-endpoint, "http://clair:6060", postgres]
+ #   networks:
+ #     - net_clair 
+
+networks:
+  net_clair:
+
