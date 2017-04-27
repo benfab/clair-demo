@@ -8,6 +8,13 @@ Docker image scanning demo with Clair
 - Docker compose
 - Golang 1.8 
 
+# Deploy
+Move in to the project directory and run docker-compose
+`cd clair-demo`
+`docker-compose up`
+
+
+
 # Install Clair
 
 Create docker network     
