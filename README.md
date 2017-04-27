@@ -3,15 +3,15 @@ Docker image scanning demo with Clair
 
 # Requirements 
 
-- CentOS 7 with Development tools installed `yum group install "Development Tools"`  
+- CentOS 7 with Development tools installed `yum group install "Development Tools"`    
 - Docker engine 
 - Docker compose
 - Golang 1.8 
 
 # Deploy
 Move in to the project directory and run docker-compose
-`cd clair-demo`
-`docker-compose up`
+`cd clair-demo`  
+`docker-compose up -d`
 
 
 
