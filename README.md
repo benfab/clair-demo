@@ -13,7 +13,9 @@ Move in to the project directory and run docker-compose
 `cd clair-demo`  
 `docker-compose up -d`
 
+# Execute an image scan  
 
+`docker run --rm -it  --net clairdemo_net_clair -v /tmp:/tmp  -v /var/run/docker.sock:/var/run/docker.sock --name analyser amouat/clair-analyse -endpoint http://clair:6060 -my-address analyser busybox`
 
 # Install Clair
 
